@@ -1,0 +1,36 @@
+[project]
+name = "fedlease"
+version = "1.0.0"
+description = "FedLEASE: Adaptive LoRA Experts Allocation and Selection for Federated Fine-Tuning"
+requires-python = ">=3.11"
+
+dependencies = [
+    "transformers>=4.30.0,<5.0.0",
+    "datasets>=2.12.0,<4.0.0",
+    "numpy>=1.24.0,<2.0.0",
+    "scikit-learn>=1.2.0",
+    "scipy>=1.10.0",
+    "matplotlib>=3.7.0",
+    "tqdm>=4.65.0",
+    "evaluate>=0.4.0",
+    "accelerate>=1.13.0,<2.0.0",
+    "bitsandbytes>=0.41.0,<0.45.0",
+    "torch==2.4.1",
+    "torchvision==0.19.1",
+]
+
+[dependency-groups]
+slab = ["slurmlab[hpo]"]
+
+[tool.uv]
+default-groups = ["slab"]
+
+[[tool.uv.index]]
+name = "pytorch-cu121"
+url = "https://download.pytorch.org/whl/cu121"
+explicit = true
+
+[tool.uv.sources]
+slurmlab = { path = "../SlurmLab", editable = true }
+torch = { index = "pytorch-cu121" }
+torchvision = { index = "pytorch-cu121" }

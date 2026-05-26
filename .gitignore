@@ -1,0 +1,80 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Output and Cache
+output/
+*.log
+*.npy
+*.png
+*.json
+checkpoints/
+lora_params/
+
+# Model Cache
+.cache/
+models/
+*.bin
+*.safetensors
+
+# OS
+.DS_Store
+Thumbs.db
+
+# MLflow local tracking
+mlflow.db
+
+# Backup
+main_original.py
+
+# Docs
+docs
+.autoresearch/
+
+.docs/
+.claude/
+
+# head_swap_eval ephemeral output
+scripts/head_swap_logs/
+scripts/head_swap_results/
+
+# experiment ephemeral output (cold-start, expert-merge, head-portability)
+scripts/cold_start_logs/
+scripts/cold_start_results/
+scripts/expert_merge_logs/
+scripts/expert_merge_results/
+scripts/head_portability_results/
+.codex-cache/
