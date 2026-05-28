@@ -14,6 +14,12 @@ while still teaching the other experts to generalize across tasks.
 > Course project for **Distributed Deep Learning Systems (DDLS)**, University of
 > Bern. Authors: **Hao Wang** and **Guodong Ma**.
 
+![Dual-Forward Cross-Silo Federated Fine-Tuning framework](assets/framework.png)
+
+*At each client, the dual-forward pass (home + non-home) feeds the combined
+objective `L_total = L_spec + λ·L_xc`; the matching server step aggregates the
+home/non-home experts, the universal expert, and the within-cluster average.*
+
 ## Highlights
 
 - **Two forward passes, one backward step.** The home-task gradient is routed

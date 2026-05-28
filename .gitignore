@@ -44,6 +44,10 @@ output/
 checkpoints/
 lora_params/
 
+# ...but keep documentation assets (framework figure, etc.)
+!assets/
+!assets/*.png
+
 # Model Cache
 .cache/
 models/
